@@ -172,10 +172,7 @@
         </div>
     </div>
 
-    <audio id="bg-music" loop>
-        <!-- Thay file nhạc ở đây -->
-        <source src="Ngày Này Năm Ấy.mp3" type="audio/mp3">
-    </audio>
+    <audio id="nhac" src="Ngày Này Năm Ấy.mp3"></audio>
 
     <script>
         const canvas = document.getElementById('starfield');
@@ -433,6 +430,12 @@
         for (let i = 0; i < 4; i++) {
             setTimeout(createLantern, i * 600);
         }
+
+        document.addEventListener('click', function() {
+            document.getElementById('nhac').play();
+        }, {
+            once: true
+        });
     </script>
 </body>
 
